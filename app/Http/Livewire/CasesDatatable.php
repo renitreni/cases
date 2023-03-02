@@ -16,6 +16,7 @@ class CasesDatatable extends DataTableComponentCustom
             Column::make("Id", "id")
                 ->sortable(),
             Column::make("Sra", "sra")
+                ->searchable()
                 ->sortable(),
             Column::make("Suspension date", "suspension_date")
                 ->sortable(),
@@ -24,20 +25,28 @@ class CasesDatatable extends DataTableComponentCustom
             Column::make("Suspension days", "suspension_days")
                 ->sortable(),
             Column::make("Email", "email")
+                ->searchable()
                 ->sortable(),
             Column::make("Employer name", "employer_name")
+                ->searchable()
                 ->sortable(),
             Column::make("Case officer", "case_officer")
+                ->searchable()
                 ->sortable(),
             Column::make("Sra contact", "sra_contact")
+                ->searchable()
                 ->sortable(),
             Column::make("Worker lasname", "worker_lasname")
+                ->searchable()
                 ->sortable(),
             Column::make("Worker firstname", "worker_firstname")
+                ->searchable()
                 ->sortable(),
             Column::make("Worker middlename", "worker_middlename")
+                ->searchable()
                 ->sortable(),
             Column::make("Atnsia case id", "atnsia_case_id")
+                ->searchable()
                 ->sortable(),
             Column::make("Created at", "created_at")
                 ->sortable(),
