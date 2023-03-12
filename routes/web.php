@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\LanguageController;
-use App\Http\Controllers\PaginationController;
 use App\Http\Livewire\CasesLivewire;
+use App\Http\Livewire\DashboardLivewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,19 +16,18 @@ use App\Http\Livewire\CasesLivewire;
 |
 */
 
-Route::group(['middleware'=>'guest'],function(){
-    Route::get('/',[AuthController::class,'login'])->name('login');
-    Route::get('/register',[AuthController::class,'register'])->name('register');
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/', [AuthController::class, 'login'])->name('login');
+    // Route::get('/register',[AuthController::class,'register'])->name('register');
     Route::get('/forget-password',[AuthController::class,'forgetPassword'])->name('forget_password');
-    Route::post('/authenticate',[AuthController::class,'authenticate'])->name('authenticate');
-    Route::post('/signup',[AuthController::class,'signup'])->name('signup');
+    Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
+    // Route::post('/signup',[AuthController::class,'signup'])->name('signup');
 });
 
 
-Route::group(['middleware'=>'auth'],function(){
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('dashboard', DashboardLivewire::class)->name('dashboard');
     Route::get('cases', CasesLivewire::class)->name('cases');
 });
 
-Route::post('/logout',[AuthController::class,'logout'])->name('logout')->middleware('auth');
-Route::get('/lang/{lang}',[ LanguageController::class,'switchLang'])->name('switch_lang');
-Route::get('/pagination-per-page/{per_page}',[ PaginationController::class,'set_pagination_per_page'])->name('pagination_per_page');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');

@@ -96,14 +96,14 @@
                                         </ul>
                                     </div> --}}
                                 </div>
-                                <div class="admin-topbar">
+                                {{-- <div class="admin-topbar">
                                     <p class="mb-0">
                                         Don't have an account?
                                         <a href="{{ route('register') }}" class="color-primary">
                                             Sign up
                                         </a>
                                     </p>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

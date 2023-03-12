@@ -27,11 +27,11 @@
                                 @if(Auth::check())
                                     <h6 class="text-capitalize">{{ Auth::user()->name }}</h6>
                                 @endif
-                                <span>UI Designer</span>
+                                <span>Logged In</span>
                             </div>
                         </div>
                         <div class="nav-author__options">
-                            <ul>
+                            {{-- <ul>
                                 <li>
                                     <a href="">
                                         <img src="{{ asset('assets/img/svg/user.svg') }}" alt="user" class="svg"> Profile</a>
@@ -52,7 +52,7 @@
                                     <a href="">
                                         <img src="{{ asset('assets/img/svg/bell.svg') }}" alt="bell" class="svg"> Help</a>
                                 </li>
-                            </ul>
+                            </ul> --}}
                             <a href="" class="nav-author__signout" onclick="event.preventDefault();document.getElementById('logout').submit();">
                                 <img src="{{ asset('assets/img/svg/log-out.svg') }}" alt="log-out" class="svg">
                                  Sign Out</a>

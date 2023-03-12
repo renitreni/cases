@@ -10,7 +10,7 @@
         <div class="customizer__single">
             <h4>Layout Type</h4>
             <ul class="customizer-list d-flex layout">
-                <li class="customizer-list__item">
+                {{-- <li class="customizer-list__item">
                     <a href="{{ Helper::get_translation_url( 'en' ) }}" class="{{ ! Helper::is_rtl() ? 'active' : '' }}">
                         <img src="{{ asset('assets/img/ltr.png') }}" alt="">
                         <i class="fa fa-check-circle"></i>
@@ -21,7 +21,7 @@
                         <img src="{{ asset('assets/img/rtl.png') }}" alt="">
                         <i class="fa fa-check-circle"></i>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </div>
         <div class="customizer__single">
