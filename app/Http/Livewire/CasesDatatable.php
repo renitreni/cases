@@ -15,6 +15,9 @@ class CasesDatatable extends DataTableComponentCustom
         return [
             Column::make("Id", "id")
                 ->sortable(),
+            Column::make("CR No.", "cr_no")
+                ->searchable()
+                ->sortable(),
             Column::make("Sra", "sra")
                 ->searchable()
                 ->sortable(),

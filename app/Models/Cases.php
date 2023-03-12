@@ -20,7 +20,7 @@ class Cases extends Model
         'employer_name',
         'case_officer',
         'sra_contact',
-        'worker_lasname',
+        'worker_lastname',
         'worker_firstname',
         'worker_middlename',
         'atnsia_case_id',

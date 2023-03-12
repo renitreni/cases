@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('employer_name')->nullable();
             $table->string('case_officer')->nullable();
             $table->string('sra_contact')->nullable();
-            $table->string('worker_lasname')->nullable();
+            $table->string('worker_lastname')->nullable();
             $table->string('worker_firstname')->nullable();
             $table->string('worker_middlename')->nullable();
             $table->string('atnsia_case_id')->nullable();

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Livewire\CasesLivewire;
-use App\Http\Livewire\DashboardLivewire;
+use App\Http\Livewire\SearchableLivewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +26,8 @@ Route::group(['middleware' => 'guest'], function () {
 
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('dashboard', DashboardLivewire::class)->name('dashboard');
     Route::get('cases', CasesLivewire::class)->name('cases');
+    Route::get('searchables', SearchableLivewire::class)->name('searchables');
 });
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');

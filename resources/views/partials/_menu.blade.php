@@ -9,5 +9,13 @@
                 <span class="menu-text">Cases</span>
             </a>
         </li>
+        <li>
+            <a href="{{ route('searchables') }}" class="{{ Request::is('searchables') ? 'active':'' }}">
+                <span class="nav-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <span class="menu-text">Searchables</span>
+            </a>
+        </li>
     </ul>
 </div>

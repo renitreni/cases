@@ -25,7 +25,7 @@ class CasesFactory extends Factory
             'employer_name' => $this->faker->name(),
             'case_officer' => $this->faker->name(),
             'sra_contact' => $this->faker->phoneNumber(),
-            'worker_lasname' => $this->faker->lastName(),
+            'worker_lastname' => $this->faker->lastName(),
             'worker_firstname'=> $this->faker->firstName(),
             'worker_middlename'=> $this->faker->lastName(),
             'atnsia_case_id' => $this->faker->numberBetween(1,1000),
