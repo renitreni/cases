@@ -39,7 +39,7 @@ class CasesDatatable extends DataTableComponentCustom
             Column::make("Sra contact", "sra_contact")
                 ->searchable()
                 ->sortable(),
-            Column::make("Worker lasname", "worker_lasname")
+            Column::make("Worker lasname", "worker_lastname")
                 ->searchable()
                 ->sortable(),
             Column::make("Worker firstname", "worker_firstname")
