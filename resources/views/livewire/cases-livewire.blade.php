@@ -70,7 +70,7 @@
                         </div>
                         <div class="col-md-6 mb-2">
                             <label>Worker's Lastname</label>
-                            <input class="form-control" wire:model='detail.worker_lasname'>
+                            <input class="form-control" wire:model='detail.worker_lastname'>
                         </div>
                         <div class="col-md-6 mb-2">
                             <label>Worker's Firstname</label>
