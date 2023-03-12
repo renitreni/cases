@@ -29,6 +29,9 @@ class CasesFactory extends Factory
             'worker_firstname'=> $this->faker->firstName(),
             'worker_middlename'=> $this->faker->lastName(),
             'atnsia_case_id' => $this->faker->numberBetween(1,1000),
+            'cr_no'=> $this->faker->creditCardNumber(),
+            'office_address'=> $this->faker->address(),
+            'nature_of_complaint'=> $this->faker->word(),
         ];
     }
 }

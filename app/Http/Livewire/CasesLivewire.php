@@ -31,7 +31,7 @@ class CasesLivewire extends Component
 
     public function edit()
     {
-        Cases::updateOrCreate(['id' => $this->detail['id']],[
+        Cases::updateOrCreate(['id' => $this->detail['id']], [
             'sra' => $this->detail['sra'],
             'suspension_date' => $this->detail['suspension_date'],
             'office_order_no' => $this->detail['office_order_no'],
@@ -44,6 +44,9 @@ class CasesLivewire extends Component
             'worker_firstname' => $this->detail['worker_firstname'],
             'worker_middlename' => $this->detail['worker_middlename'],
             'atnsia_case_id' => $this->detail['atnsia_case_id'],
+            'cr_no' => $this->detail['cr_no'],
+            'office_address' => $this->detail['office_address'],
+            'nature_of_complaint' => $this->detail['nature_of_complaint'],
         ]);
 
         $this->emit('refreshDatatable');

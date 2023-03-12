@@ -84,6 +84,18 @@
                             <label>ATNSIA Case ID No.</label>
                             <input class="form-control" wire:model='detail.atnsia_case_id'>
                         </div>
+                        <div class="col-md-6 mb-2">
+                            <label>Cr No.</label>
+                            <input class="form-control" wire:model='detail.cr_no'>
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label>Nature of Complaint</label>
+                            <input class="form-control" wire:model='detail.nature_of_complaint'>
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <label>Office Address</label>
+                            <textarea class="form-control" wire:model='detail.office_address'></textarea>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

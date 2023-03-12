@@ -13,4 +13,4 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2023 Fonticons, Inc.
  */:host,:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free"}@font-face{font-display:block;font-family:Font Awesome\ 6 Free;font-style:normal;font-weight:900;src:url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?bdb9e23299f9d1320a8be0879fc918d1) format("woff2"),url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?2877d54f94f30c5d563c5164dc56be39) format("truetype")}.fa-solid,.fas{font-weight:900}
-th>div>span{white-space:nowrap}
+.table>tbody>tr>td,th>div>span{white-space:nowrap}

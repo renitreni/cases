@@ -1,10 +1,11 @@
-
-
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import '~@fortawesome/fontawesome-free/css/regular.css';
 @import '~@fortawesome/fontawesome-free/css/solid.css';
 
-th > div > span
-{
+th>div>span {
+    white-space: nowrap;
+}
+
+.table>tbody>tr>td {
     white-space: nowrap;
 }

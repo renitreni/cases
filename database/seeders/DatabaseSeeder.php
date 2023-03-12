@@ -19,13 +19,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(10)->create();
-        Cases::factory(100)->create();
-
-        $faker = Factory::create();
+        if(app()->environment() != 'production') {
+            User::factory(10)->create();
+            Cases::factory(100)->create();
+        }
 
         User::create([
-            'name' => $faker->name(),
+            'name' => 'Administrator',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('admin'),

@@ -24,5 +24,8 @@ class Cases extends Model
         'worker_firstname',
         'worker_middlename',
         'atnsia_case_id',
+        'cr_no',
+        'office_address',
+        'nature_of_complaint'
     ];
 }
