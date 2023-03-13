@@ -10,6 +10,14 @@
             </a>
         </li>
         <li>
+            <a href="{{ route('lifted') }}" class="{{ Request::is('lifted') ? 'active':'' }}">
+                <span class="nav-icon">
+                    <i class="fa-solid fa-award"></i>
+                </span>
+                <span class="menu-text">Lifted</span>
+            </a>
+        </li>
+        <li>
             <a href="{{ route('searchables') }}" class="{{ Request::is('searchables') ? 'active':'' }}">
                 <span class="nav-icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
