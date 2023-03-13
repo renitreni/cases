@@ -77,6 +77,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
                     @isset($detail['id'])
+                        <a href="#" class="btn btn-success" data-bs-dismiss="modal" wire:click='$emit("showLifted", {{ $detail['id'] }})'>Lift Suspension</a>
                         <a href="#" class="btn btn-primary" data-bs-dismiss="modal" wire:click='edit'>Update</a>
                         <a href="#" class="btn btn-danger"  data-bs-dismiss="modal" wire:click='destroy'>Delete</a>
                     @else

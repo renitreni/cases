@@ -3,12 +3,16 @@
 namespace App\Http\Livewire;
 
 use App\Models\Cases;
+use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Http\Livewire\Abstract\DataTableComponentCustom;
 
 class CasesDatatable extends DataTableComponentCustom
 {
-    protected $model = Cases::class;
+    public function builder(): Builder
+    {
+        return Cases::query()->with('lifted');
+    }
 
     public function columns(): array
     {

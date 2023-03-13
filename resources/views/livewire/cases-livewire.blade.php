@@ -20,4 +20,5 @@
         </div>
     </div>
     @include('livewire.partials.suspension-modal')
+    <livewire:lifted-suspension-livewire>
 </div>

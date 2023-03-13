@@ -6,7 +6,7 @@
                 <span class="nav-icon">
                     <i class="fa-solid fa-suitcase"></i>
                 </span>
-                <span class="menu-text">Cases</span>
+                <span class="menu-text">SRA/Company</span>
             </a>
         </li>
         <li>

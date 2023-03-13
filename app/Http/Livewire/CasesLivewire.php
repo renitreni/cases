@@ -45,8 +45,7 @@ class CasesLivewire extends Component
             'worker_middlename' => $this->detail['worker_middlename'],
             'atnsia_case_id' => $this->detail['atnsia_case_id'],
             'cr_no' => $this->detail['cr_no'],
-            'office_address' => $this->detail['office_address'],
-            'nature_of_complaint' => $this->detail['nature_of_complaint'],
+            'office_address' => $this->detail['office_address']
         ]);
 
         $this->emit('refreshDatatable');
