@@ -29,7 +29,6 @@ return new class extends Migration
             $table->string('atnsia_case_id')->nullable();
             $table->string('cr_no')->nullable();
             $table->text('office_address')->nullable();
-            $table->string('nature_of_complaint')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

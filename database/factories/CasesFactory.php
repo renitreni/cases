@@ -31,7 +31,6 @@ class CasesFactory extends Factory
             'atnsia_case_id' => $this->faker->numberBetween(1,1000),
             'cr_no'=> $this->faker->creditCardNumber(),
             'office_address'=> $this->faker->address(),
-            'nature_of_complaint'=> $this->faker->word(),
         ];
     }
 }

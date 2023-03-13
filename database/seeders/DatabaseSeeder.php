@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
     {
         if(app()->environment() != 'production') {
             User::factory(10)->create();
-            Cases::factory(100)->create();
+            Cases::factory(10)->create();
+            Cases::factory(10)->hasLifted(10)->create();
         }
 
         User::create([
