@@ -11,7 +11,7 @@ class CasesDatatable extends DataTableComponentCustom
 {
     public function builder(): Builder
     {
-        return Cases::query()->with('lifted');
+        return Cases::query()->doesntHave('lifted');
     }
 
     public function columns(): array

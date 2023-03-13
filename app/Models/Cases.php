@@ -30,6 +30,6 @@ class Cases extends Model
 
     public function lifted()
     {
-        return $this->hasOne(Lifted::class);
+        return $this->hasOne(Lifted::class,'cases_id');
     }
 }

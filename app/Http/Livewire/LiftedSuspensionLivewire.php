@@ -32,5 +32,6 @@ class LiftedSuspensionLivewire extends Component
 
         $this->detail;
         $this->dispatchBrowserEvent('close-modal');
+        $this->emit('refreshDatatable');
     }
 }
