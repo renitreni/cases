@@ -32,4 +32,10 @@ class Cases extends Model
     {
         return $this->hasOne(Lifted::class,'cases_id');
     }
+
+
+    public function natureOfComplain()
+    {
+        return $this->hasMany(NatureOfComplain::class,'cases_id');
+    }
 }
