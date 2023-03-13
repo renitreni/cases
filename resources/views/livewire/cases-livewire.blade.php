@@ -7,7 +7,7 @@
             <div class="columnGrid-wrapper">
                 <div class="row">
                     <div class="col-12">
-                        <a href="#" class="btn btn-primary mb-2" data-bs-toggle="modal" wire:click='$set("detail", [])'
+                        <a href="#" class="btn btn-primary mb-2" data-bs-toggle="modal" wire:click='clearInputs'
                             data-bs-target="#crudModal">
                             Add Suspension
                         </a>

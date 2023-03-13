@@ -10,6 +10,7 @@ class NatureOfComplain extends Model
     use HasFactory;
 
     protected $fillable = [
+        'cases_id',
         'description'
     ];
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Cases;
+use App\Models\NatureOfComplain;
 use Livewire\Component;
 
 class CasesLivewire extends Component
@@ -10,15 +11,24 @@ class CasesLivewire extends Component
     protected $listeners = ['bind'];
 
     public $detail;
+    public $natureOfComplain;
+    public $nature;
 
     public function render()
     {
         return view('livewire.cases-livewire');
     }
 
+    public function clearInputs()
+    {
+        $this->detail = [];
+        $this->natureOfComplain = [];
+    }
+
     public function bind($id)
     {
         $this->detail = Cases::find($id)->toArray();
+        $this->natureOfComplain = NatureOfComplain::where('cases_id', $id)->get()->toArray();
     }
 
     public function destroy()
@@ -48,13 +58,19 @@ class CasesLivewire extends Component
             'office_address' => $this->detail['office_address']
         ]);
 
+        NatureOfComplain::query()->where('cases_id', $this->detail['id'])->delete();
+        foreach ($this->natureOfComplain as $item) {
+            $item['cases_id'] = $this->detail['id'];
+            NatureOfComplain::create($item);
+        }
+
         $this->emit('refreshDatatable');
         $this->detail = [];
     }
 
     public function store()
     {
-        Cases::create([
+        $cases = Cases::create([
             'sra' => $this->detail['sra'],
             'suspension_date' => $this->detail['suspension_date'] ?? null,
             'office_order_no' => $this->detail['office_order_no'] ?? null,
@@ -69,7 +85,28 @@ class CasesLivewire extends Component
             'atnsia_case_id' => $this->detail['atnsia_case_id'] ?? null,
         ]);
 
+        foreach ($this->natureOfComplain as $item) {
+            $item['cases_id'] = $cases->id;
+            NatureOfComplain::create($item);
+        }
+
         $this->emit('refreshDatatable');
         $this->detail = [];
+    }
+
+    public function removeNOC($description)
+    {
+        $this->natureOfComplain = array_filter($this->natureOfComplain, function ($value) use ($description) {
+            return $value['description'] != $description;
+        });
+    }
+
+    public function addNature()
+    {
+        $this->natureOfComplain[] = [
+            'description' => $this->nature
+        ];
+
+        $this->nature = '';
     }
 }
