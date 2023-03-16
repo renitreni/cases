@@ -57,7 +57,7 @@
                                 <input class="form-control" wire:model='detail.worker_firstname'>
                             </div>
                             <div class="col-mdcrudModalform-control" wire:model='detail.worker_middlename'>
-                            </div>Created at
+                            </div>
                             <div class="col-md-6 mb-2">
                                 <label>ATNSIA Case ID No.</label>
                                 <input class="form-control" wire:model='detail.atnsia_case_id'>
