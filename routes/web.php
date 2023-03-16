@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Livewire\CasesLivewire;
 use App\Http\Livewire\LiftedLivewire;
 use App\Http\Livewire\SearchableLivewire;
+use App\Http\Livewire\UserLivewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('cases', CasesLivewire::class)->name('cases');
     Route::get('lifted', LiftedLivewire::class)->name('lifted');
     Route::get('searchables', SearchableLivewire::class)->name('searchables');
+    Route::get('users', UserLivewire::class)->name('users');
 });
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');

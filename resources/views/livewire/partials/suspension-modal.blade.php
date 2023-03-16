@@ -15,7 +15,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="row">
+                        <div class="row">Created at
                             <div class="col-md-12 mb-2">
                                 <label>Saudi Recruitment Agency</label>
                                 <input class="form-control" wire:model='detail.sra'>
@@ -59,7 +59,7 @@
                             <div class="col-md-6 mb-2">
                                 <label>Worker's Middlename</label>
                                 <input class="form-control" wire:model='detail.worker_middlename'>
-                            </div>
+                            </div>Created at
                             <div class="col-md-6 mb-2">
                                 <label>ATNSIA Case ID No.</label>
                                 <input class="form-control" wire:model='detail.atnsia_case_id'>

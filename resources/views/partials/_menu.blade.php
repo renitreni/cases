@@ -25,5 +25,13 @@
                 <span class="menu-text">Searchables</span>
             </a>
         </li>
+        <li>
+            <a href="{{ route('users') }}" class="{{ Request::is('users') ? 'active':'' }}">
+                <span class="nav-icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <span class="menu-text">User</span>
+            </a>
+        </li>
     </ul>
 </div>
