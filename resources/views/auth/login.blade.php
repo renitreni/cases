@@ -19,14 +19,13 @@
                     <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-8">
                         <div class="edit-profile">
                             <div class="edit-profile__logos">
-                                {{-- <img class="dark" src="{{ asset('assets/img/logo-dark.png') }}" alt="">
-                                <img class="light" src="{{ asset('assets/img/logo-white.png') }}" alt=""> --}}
-                                <h1>Case Management</h1>
+                                <img class="dark" class="mx-auto" src="{{ asset('images/dmw-logo.png') }}" alt="">
+                                <img class="light" src="{{ asset('images/dmw-logo.png') }}" alt="">
                             </div>
                             <div class="card border-0">
                                 <div class="card-header">
                                     <div class="edit-profile__title">
-                                        <h6>Sign in {{ config('app.name') }}</h6>
+                                        <h1 class="text-center">Case Management</h1>
                                     </div>
                                 </div>
                                 <div class="card-body">
