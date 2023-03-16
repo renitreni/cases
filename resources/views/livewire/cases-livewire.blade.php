@@ -7,10 +7,12 @@
             <div class="columnGrid-wrapper">
                 <div class="row">
                     <div class="col-12">
-                        <a href="#" class="btn btn-primary mb-2" data-bs-toggle="modal" wire:click='clearInputs'
-                            data-bs-target="#crudModal">
-                            Add Suspension
-                        </a>
+                        @can('admin')
+                            <a href="#" class="btn btn-primary mb-2" data-bs-toggle="modal" wire:click='clearInputs'
+                                data-bs-target="#crudModal">
+                                Add Suspension
+                            </a>
+                        @endcan
                     </div>
                     <div class="col-12">
                         <livewire:cases-datatable />

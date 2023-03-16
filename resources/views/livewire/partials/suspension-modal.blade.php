@@ -77,27 +77,32 @@
                             <div class="col-12 mb-3">
                                 <h3>Nature Of Complain</h3>
                             </div>
-                            <div class="col-12">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Keyword"
-                                        aria-label="Recipient's username" aria-describedby="button-addon2"
-                                        wire:model='nature'>
-                                    <button class="btn btn-outline-secondary" type="button" wire:click='addNature'
-                                        id="button-addon2">Add</button>
+                            @can('admin')
+                                <div class="col-12">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Keyword"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2"
+                                            wire:model='nature'>
+                                        <button class="btn btn-outline-secondary" type="button" wire:click='addNature'
+                                            id="button-addon2">Add</button>
+                                    </div>
                                 </div>
-                            </div>
+                            @endcan
                             <div class="col-12">
                                 <ol class="list-group list-group-numbered">
                                     @if ($natureOfComplain)
                                         @foreach ($natureOfComplain as $item)
                                             <li
                                                 class="list-group-item d-flex justify-content-between align-items-start">
-                                                <div class="fw-bold">{{ $item['description'] }}</div>
-                                                <button type="button" class="btn btn-sm btn-danger p-2" 
-                                                wire:click='removeNOC("{{ $item['description'] }}")'>
-                                                    <i class="fas fa-trash m-0"></i>
-                                                </button>
-                                            </li>
+                                                <div class="fw-bold mr-2">{{ $item['description'] }}</div>
+
+                                                @can('admin')
+                                                    <button type="button" class="btn btn-sm btn-danger p-2"
+                                                        wire:click='removeNOC("{{ $item['description'] }}")'>
+                                                        <i class="fas fa-trash m-0"></i>
+                                                    </button>
+                                                </li>
+                                            @endcan
                                         @endforeach
                                     @endif
                                 </ol>
@@ -108,28 +113,30 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-
-                @isset($detail['id'])
-                    <a href="#" class="btn btn-success" data-bs-dismiss="modal"
-                        wire:click='$emit("showLifted", {{ $detail['id'] }})'>Lift Suspension</a>
-                    <a href="#" class="btn btn-primary" data-bs-dismiss="modal" wire:click='edit'>Update</a>
-                    <a href="#" class="btn btn-danger" data-bs-dismiss="modal" wire:click='destroy'>Delete</a>
-                @else
-                    <a href="#" class="btn btn-primary" data-bs-dismiss="modal" wire:click='store'>Save changes</a>
-                @endisset
+                @can('admin')
+                    @isset($detail['id'])
+                        <a href="#" class="btn btn-success" data-bs-dismiss="modal"
+                            wire:click='$emit("showLifted", {{ $detail['id'] }})'>Lift Suspension</a>
+                        <a href="#" class="btn btn-primary" data-bs-dismiss="modal" wire:click='edit'>Update</a>
+                        <a href="#" class="btn btn-danger" data-bs-dismiss="modal" wire:click='destroy'>Delete</a>
+                    @else
+                        <a href="#" class="btn btn-primary" data-bs-dismiss="modal" wire:click='store'>Save
+                            changes</a>
+                    @endisset
+                @endcan
             </div>
         </div>
     </div>
 </div>
 
 @push('scripts')
-<script>
-    var crudModal = new bootstrap.Modal(document.getElementById('crudModal'));
-    window.addEventListener('close-modal-crudModal', event => {
-        crudModal.hide();
-    })
-    window.addEventListener('open-modal-crudModal', event => {
-        crudModal.show();
-    })
-</script>
+    <script>
+        var crudModal = new bootstrap.Modal(document.getElementById('crudModal'));
+        window.addEventListener('close-modal-crudModal', event => {
+            crudModal.hide();
+        })
+        window.addEventListener('open-modal-crudModal', event => {
+            crudModal.show();
+        })
+    </script>
 @endpush
