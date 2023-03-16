@@ -27,6 +27,7 @@ class CasesLivewire extends Component
 
     public function bind($id)
     {
+        $this->dispatchBrowserEvent('open-modal-crudModal');
         $this->detail = Cases::find($id)->toArray();
         $this->natureOfComplain = NatureOfComplain::where('cases_id', $id)->get()->toArray();
     }

@@ -56,9 +56,7 @@
                                 <label>Worker's Firstname</label>
                                 <input class="form-control" wire:model='detail.worker_firstname'>
                             </div>
-                            <div class="col-md-6 mb-2">
-                                <label>Worker's Middlename</label>
-                                <input class="form-control" wire:model='detail.worker_middlename'>
+                            <div class="col-mdcrudModalform-control" wire:model='detail.worker_middlename'>
                             </div>Created at
                             <div class="col-md-6 mb-2">
                                 <label>ATNSIA Case ID No.</label>
@@ -110,6 +108,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+
                 @isset($detail['id'])
                     <a href="#" class="btn btn-success" data-bs-dismiss="modal"
                         wire:click='$emit("showLifted", {{ $detail['id'] }})'>Lift Suspension</a>
@@ -122,3 +121,15 @@
         </div>
     </div>
 </div>
+
+@push('scripts')
+<script>
+    var crudModal = new bootstrap.Modal(document.getElementById('crudModal'));
+    window.addEventListener('close-modal-crudModal', event => {
+        crudModal.hide();
+    })
+    window.addEventListener('open-modal-crudModal', event => {
+        crudModal.show();
+    })
+</script>
+@endpush

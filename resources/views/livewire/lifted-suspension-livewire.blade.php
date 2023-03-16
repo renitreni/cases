@@ -47,12 +47,7 @@
                     {{-- @isset($detail['id'])
                         <a href="#" class="btn btn-primary" data-bs-dismiss="modal" wire:click='edit'>Update</a>
                         <a href="#" class="btn btn-danger"  data-bs-dismiss="modal" wire:click='destroy'>Delete</a>
-                    @else --}}
-                    <a href="#" class="btn btn-primary" wire:click='store'>Submit</a>
-                    {{-- @endisset --}}
-                </div>
-            </div>
-        </div>
+                    @else --}}crudModal
     </div>
     @push('scripts')
         <script>
@@ -67,3 +62,4 @@
         </script>
     @endpush
 </div>
+crudModal
