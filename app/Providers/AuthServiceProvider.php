@@ -27,7 +27,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         Gate::define('admin', function (User $user) {
-           return $user->role->role == UserRolesEnum::ADMIN->value;
+           return ($user->role->role ?? 'not') == UserRolesEnum::ADMIN->value;
         });
     
         $this->registerPolicies();

@@ -15,7 +15,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="row">Created at
+                        <div class="row">
                             <div class="col-md-12 mb-2">
                                 <label>Saudi Recruitment Agency</label>
                                 <input class="form-control" wire:model='detail.sra'>
@@ -56,7 +56,9 @@
                                 <label>Worker's Firstname</label>
                                 <input class="form-control" wire:model='detail.worker_firstname'>
                             </div>
-                            <div class="col-mdcrudModalform-control" wire:model='detail.worker_middlename'>
+                            <div class="col-md-6 mb-2">
+                                <label>Worker's Middlename</label>
+                                <input class="form-control" wire:model='detail.worker_middlename'>
                             </div>
                             <div class="col-md-6 mb-2">
                                 <label>ATNSIA Case ID No.</label>
