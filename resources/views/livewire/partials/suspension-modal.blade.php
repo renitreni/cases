@@ -40,6 +40,10 @@
                                 <label>Employer's Name</label>
                                 <input class="form-control" wire:model='detail.employer_name'>
                             </div>
+                            <div class="col-md-6 mb-2">
+                                <label>Employer ID</label>
+                                <input class="form-control" wire:model='detail.employer_id'>
+                            </div>
                             <div class="col-md-12 mb-2">
                                 <label>Case Officer Who Requested For Suspension</label>
                                 <input class="form-control" wire:model='detail.case_officer'>

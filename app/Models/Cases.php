@@ -18,6 +18,7 @@ class Cases extends Model
         'suspension_days',
         'email',
         'employer_name',
+        'employer_id',
         'case_officer',
         'sra_contact',
         'worker_lastname',

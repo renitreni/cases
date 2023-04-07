@@ -37,6 +37,9 @@ class CasesDatatable extends DataTableComponentCustom
             Column::make("Employer name", "employer_name")
                 ->searchable()
                 ->sortable(),
+            Column::make("Employer ID", "employer_id")
+                ->searchable()
+                ->sortable(),
             Column::make("Case officer", "case_officer")
                 ->searchable()
                 ->sortable(),
