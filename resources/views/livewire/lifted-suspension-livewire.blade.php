@@ -44,10 +44,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" wire:click='store'>Confirm Lifted</button>
                     {{-- @isset($detail['id'])
                         <a href="#" class="btn btn-primary" data-bs-dismiss="modal" wire:click='edit'>Update</a>
                         <a href="#" class="btn btn-danger"  data-bs-dismiss="modal" wire:click='destroy'>Delete</a>
-                    @else --}}crudModal
+                    @else --}}
     </div>
     @push('scripts')
         <script>
@@ -62,4 +63,3 @@
         </script>
     @endpush
 </div>
-crudModal
