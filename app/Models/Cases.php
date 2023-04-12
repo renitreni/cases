@@ -26,7 +26,8 @@ class Cases extends Model
         'worker_middlename',
         'atnsia_case_id',
         'cr_no',
-        'office_address'
+        'office_address',
+        'employer_national_id'
     ];
 
     public function lifted()

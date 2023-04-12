@@ -9,8 +9,9 @@ use Livewire\Component;
 class SearchableLivewire extends Component
 {
     public $cr_no;
-    public $sra;
 
+    public $sra;
+    
     public $results;
 
     public function render()

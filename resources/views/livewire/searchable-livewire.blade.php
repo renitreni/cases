@@ -6,11 +6,15 @@
         <div class="card-body">
             <div class="columnGrid-wrapper">
                 <div class="row mb-3">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <label>CR No.</label>
                         <input type="text" class="form-control" wire:model='cr_no'>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
+                        <label>Saudi Recruitment Agency</label>
+                        <input type="text" class="form-control" wire:model='sra'>
+                    </div>
+                    <div class="col-md-4">
                         <label>Saudi Recruitment Agency</label>
                         <input type="text" class="form-control" wire:model='sra'>
                     </div>
