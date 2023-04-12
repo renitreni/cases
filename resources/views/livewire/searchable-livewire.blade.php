@@ -15,8 +15,8 @@
                         <input type="text" class="form-control" wire:model='sra'>
                     </div>
                     <div class="col-md-4">
-                        <label>Saudi Recruitment Agency</label>
-                        <input type="text" class="form-control" wire:model='sra'>
+                        <label>National ID (Employer)</label>
+                        <input type="text" class="form-control" wire:model='employer_national_id'>
                     </div>
                 </div>
                 <div class="row mb-3 justify-content-center">
@@ -74,8 +74,8 @@
                                         <p>{{ $result['worker_lastname'] }}, {{ $result['worker_firstname'] }} {{ $result['worker_middlename'] }}</p>
                                     </div>
                                     <div class="col-md-3 text-black-400">
-                                        <p class="h6">Nature Of Complaint</p>
-                                        <p>{{ $result['nature_of_complaint'] }}</p>
+                                        <p class="h6">National ID (Employer)</p>
+                                        <p>{{ $result['employer_national_id'] }}</p>
                                     </div>
                                     <div class="col-md-3 text-black-400">
                                         <p class="h6">Office Order No.</p>

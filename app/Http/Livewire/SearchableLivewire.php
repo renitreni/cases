@@ -11,7 +11,9 @@ class SearchableLivewire extends Component
     public $cr_no;
 
     public $sra;
-    
+
+    public $employer_national_id;
+
     public $results;
 
     public function render()
@@ -27,6 +29,9 @@ class SearchableLivewire extends Component
             })
             ->when($this->sra, function($q){
                 $q->where(DB::raw('lower(sra)'), 'like', "$this->sra%");
+            })
+            ->when($this->employer_national_id, function($q){
+                $q->where(DB::raw('lower(employer_national_id)'), 'like', "$this->sra%");
             })
             ->get()
             ->toArray();
